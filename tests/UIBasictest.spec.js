@@ -51,7 +51,7 @@ test('UI controls validation', async ({ page }) => {
 
 })
 
-test.only('Handling windows', async ({ browser }) => {
+test('Handling windows', async ({ browser }) => {
     const context = await browser.newContext();
     const page =  await context.newPage();
     const userName = page.locator('#username');
