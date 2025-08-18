@@ -32,7 +32,6 @@ test.describe('', async() => {
         await page.locator('div li').first().waitFor();
         const bool = await page.locator("h3:has-text('ZARA COAT 3')").isVisible();
         expect(bool).toBeTruthy();
-        await page.pause();
         await page.locator('.subtotal button').click();
         await expect(page.locator('.payment__type--cc')).toContainText('Credit Card');
 
