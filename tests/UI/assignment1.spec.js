@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { title } from 'process';
 
-test.describe('Assignment 1', () => {
+
 
     test('Validating Zara coat 3 product', async ({ page }) => {
         const email = 'jeevan6veeru@gmail.com';
@@ -24,4 +24,4 @@ test.describe('Assignment 1', () => {
         // validating the product name
         await expect(products.first()).toHaveText(productName);
     })
-})
+

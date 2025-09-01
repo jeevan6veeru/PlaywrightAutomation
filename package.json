@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "description": "Playwright automation",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression": "npx playwright test",
+    "Smoke": "npx playwright test --grep @Smoke",
+    "allure:generate": "npx allure generate ./allure-results",
+    "allure:open": "npx allure open ./allure-report"
+  },
   "keywords": [],
   "author": "Jeevan",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.53.1",
-    "@types/node": "^24.0.7"
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.7",
+    "allure-playwright": "^3.3.3",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "exceljs": "^4.4.0"
   }
 }
