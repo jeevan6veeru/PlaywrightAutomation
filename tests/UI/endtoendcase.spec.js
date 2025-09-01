@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('', async() => {
-    test('End to end test case for ecommerce', async ({page}) => {
+
+    test('@Smoke End to end test case for ecommerce', async ({page}) => {
          const email = 'jeevan6veeru@gmail.com';
         const password = 'Jeevan@10';
         const productName = 'ZARA COAT 3';
@@ -38,4 +38,3 @@ test.describe('', async() => {
 
 
     })
-})

@@ -1,5 +1,5 @@
 import {test, expect, request} from '@playwright/test';
-import { APiUtils } from '../utils/apiutils';
+import { apiUtils } from '../../utils/APiUtils';
 
 const loginPayLoad = {userEmail:"jeevan6veeru@gmail.com",userPassword:"Jeevan@10"};
 const orderPayLoad = {orders:[{country:"Cuba",productOrderedId:"67a8dde5c0d3e6622a297cc8"}]};
@@ -8,8 +8,8 @@ let response;
 test.beforeAll( async()=>
 {
    const apiContext = await request.newContext();
-   const apiUtils = new APiUtils(apiContext,loginPayLoad);
-   response =  await apiUtils.createOrder(orderPayLoad);
+   const apiutils = new apiUtils(apiContext,loginPayLoad);
+   response =  await apiutils.createOrder(orderPayLoad);
  
 })
  
