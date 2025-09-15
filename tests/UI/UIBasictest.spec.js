@@ -1,11 +1,15 @@
 import { test, expect } from '@playwright/test';
-import { describe } from 'node:test';
+
+    let userName;
+    let password;
+    let signButton;
+    let cardTitles;
 
 test.beforeEach(async ({ page }) => {
-    const userName = page.locator('#username');
-    const password = page.locator('#password');
-    const signButton = page.locator('#signInBtn');
-    const cardTitles = page.locator('.card-body a');
+    userName = page.locator('#username');
+    password = page.locator('#password');
+    signButton = page.locator('#signInBtn');
+    cardTitles = page.locator('.card-body a');
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
     console.log(await page.title());
     await expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
@@ -38,8 +42,8 @@ test('Invalid Login continution validation', async ({ page }) => {
     await userName.fill('');
     await password.fill('rahulshettyacademy');
     await signButton.click();
-    console.log(await cardTitles.first().textContent());
-    console.log(await cardTitles.nth(1).textContent());
+    // console.log(await cardTitles.first().textContent());
+    // console.log(await cardTitles.nth(1).textContent());
     const allTitles = await cardTitles.allTextContents();
     console.log(allTitles);
 })
