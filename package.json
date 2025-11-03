@@ -6,21 +6,25 @@
   "scripts": {
     "regression": "npx playwright test",
     "Smoke": "npx playwright test --grep @Smoke",
-    "allure:generate": "npx allure generate ./allure-results",
-    "allure:open": "npx allure open ./allure-report"
+    "allure:generate": "allure generate allure-results -o allure-report --clean",
+    "allure:open": "allure open allure-report"
   },
   "keywords": [],
   "author": "Jeevan",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
+    "@playwright/test": "^1.56.1",
     "@types/node": "^24.0.7",
-    "allure-playwright": "^3.4.1",
+    "@types/reflect-metadata": "^0.0.5",
+    "allure-playwright": "^3.4.2",
     "typescript": "^5.9.2"
   },
   "dependencies": {
     "@cucumber/cucumber": "^12.2.0",
-    "exceljs": "^4.4.0"
+    "class-transformer": "^0.5.1",
+    "exceljs": "^4.4.0",
+    "inversify": "^7.10.3",
+    "reflect-metadata": "^0.2.2"
   }
 }
