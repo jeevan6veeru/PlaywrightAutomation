@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { POManager } from '../../pom/POManager';
+import { POManager } from '../../pages/POManager';
 const data = JSON.parse(JSON.stringify(require('../../utils/EntireFlowTestData.json')));
 
 test('@Smoke Entire flow till checkout', async ({ page }) => {

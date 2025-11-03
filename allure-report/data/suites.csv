@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7773","@Smoke Entire flow till checkout","chromium","2025-11-03","passed","2025-11-03","","UI\EntireFlow.spec.ts","",""

@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -31,6 +32,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
+    headless: true,
     viewport: { width: 1920, height: 1080 },
     screenshot:'only-on-failure',
     video:'retain-on-failure',
